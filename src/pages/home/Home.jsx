@@ -1,16 +1,28 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import Sidebar from '../../components/Sidebar';
 
 const useStyles = createUseStyles({
-  home: {
-    color: "red",
+  mainContainer: {
+    display: 'flex',
+  },
+  container: {
+    backgroundColor: 'pink',
+    flex: 5,
   },
 });
 
 const Home = () => {
   const classes = useStyles();
 
-  return <div className={classes.home}>Home</div>;
+  return (
+    <div className={classes.mainContainer}>
+      <Sidebar />
+      <div className={classes.container}>
+        <p>my container</p>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

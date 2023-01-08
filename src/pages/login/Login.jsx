@@ -1,9 +1,9 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
   login: {
-    color: "red",
+    color: 'red',
   },
 });
 

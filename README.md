@@ -12,6 +12,7 @@ The design was made using [Adobe XD](https://www.adobe.com/fr/products/xd.html)
 
 - React-Router-Dom V6
 - React JSS
+- Material UI
 
 ## License
 
