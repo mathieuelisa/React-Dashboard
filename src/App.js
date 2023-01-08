@@ -13,9 +13,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/list" element={<List />} />
-          <Route path="/single" element={<Single />} />
-          <Route path="/new" element={<New />} />
+          {/* Users route */}
+          <Route path="/users" element={<List />} />
+          <Route path="/users/:userId" element={<Single />} />
+          <Route path="/users/new" element={<New />} />
+          {/* Products route */}
+          <Route path="/products" element={<List />} />
+          <Route path="/products/:productId" element={<Single />} />
+          <Route path="/products/new" element={<New />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -2,14 +2,14 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  single: {
-    color: "brown",
+  sidebar: {
+    color: "green",
   },
 });
 
-const Single = () => {
+const Sidebar = () => {
   const classes = useStyles();
-  return <div className={classes.single}>Single</div>;
+  return <div className={classes.sidebar}>Sidebar</div>;
 };
 
-export default Single;
+export default Sidebar;

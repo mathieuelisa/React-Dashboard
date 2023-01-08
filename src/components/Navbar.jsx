@@ -2,14 +2,14 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  single: {
-    color: "brown",
+  navbar: {
+    color: "green",
   },
 });
 
-const Single = () => {
+const Navbar = () => {
   const classes = useStyles();
-  return <div className={classes.single}>Single</div>;
+  return <div className={classes.navbar}>Navbar</div>;
 };
 
-export default Single;
+export default Navbar;
