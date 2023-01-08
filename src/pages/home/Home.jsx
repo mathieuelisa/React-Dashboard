@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
 const useStyles = createUseStyles({
@@ -7,7 +8,6 @@ const useStyles = createUseStyles({
     display: 'flex',
   },
   container: {
-    backgroundColor: 'pink',
     flex: 5,
   },
 });
@@ -19,6 +19,7 @@ const Home = () => {
     <div className={classes.mainContainer}>
       <Sidebar />
       <div className={classes.container}>
+        <Navbar />
         <p>my container</p>
       </div>
     </div>

@@ -24,19 +24,19 @@ const useStyles = createUseStyles({
     backgroundColor: 'white',
   },
   logo: {
-    height: 60,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    height: 60,
     borderBottom: '1px solid lightgray',
   },
   listContainer: {
     paddingLeft: 15,
   },
   item: {
-    listStyle: 'none',
     display: 'flex',
     alignItems: 'center',
+    listStyle: 'none',
     cursor: 'pointer',
     color: '#474747',
     height: 30,
@@ -58,9 +58,9 @@ const useStyles = createUseStyles({
   },
   containerColor: {
     display: 'flex',
-    height: 100,
     alignItems: 'center',
     justifyContent: 'center',
+    height: 100,
     '& >:nth-child(1)': {
       backgroundColor: 'whitesmoke',
     },
@@ -77,6 +77,7 @@ const useStyles = createUseStyles({
     border: '1px solid black',
     borderRadius: '5px',
     margin: '0 5px',
+    cursor: 'pointer',
   },
 });
 
