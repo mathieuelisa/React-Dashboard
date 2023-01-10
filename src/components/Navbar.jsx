@@ -68,6 +68,10 @@ const useStyles = createUseStyles({
     position: 'absolute',
     top: 0,
     right: '-10px',
+    border: '1px solid #797878',
+  },
+  langageChoice: {
+    marginLeft: 10,
   },
 });
 
@@ -82,7 +86,8 @@ const Navbar = () => {
 
       <div className={classes.itemsContainer}>
         <div className={classes.item}>
-          <PublicIcon className={classes.icons} /> English
+          <PublicIcon className={classes.icons} />
+          <p className={classes.langageChoice}>English</p>
         </div>
         <div className={classes.item}>
           <DarkModeIcon className={classes.icons} />
