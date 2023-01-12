@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     height: 60,
     padding: '0 20px',
-    borderBottom: '1px solid lightgray',
+    borderBottom: '1px solid #f1efef',
   },
   itemsContainer: {
     display: 'flex',

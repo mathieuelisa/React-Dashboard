@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    borderRight: '1px solid lightgray',
+    borderRight: '1px solid #f1efef',
     minHeight: '100vh',
     backgroundColor: 'white',
   },
@@ -28,7 +28,8 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     height: 60,
-    borderBottom: '1px solid lightgray',
+    borderBottom: '1px solid #f1efef',
+    fontWeight: 'bold',
   },
   listContainer: {
     paddingLeft: 15,
@@ -86,7 +87,7 @@ const Sidebar = () => {
   return (
     <div className={classes.sidebar}>
       <div className={classes.logo}>
-        <p>LOGO</p>
+        <p>REACT DASHBOARD</p>
       </div>
 
       <div className={classes.listContainer}>

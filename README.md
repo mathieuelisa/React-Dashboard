@@ -14,7 +14,8 @@ The design was made using [Adobe XD](https://www.adobe.com/fr/products/xd.html)
 - React JSS
 - Material UI
 - Eslint and Prettier
-- ClassNames
+- Classnames
+- Recharts JS
 
 ## License
 

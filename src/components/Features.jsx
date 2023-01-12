@@ -118,7 +118,7 @@ const Features = () => {
             </div>
 
             <div>
-              <h4 className={classes.targetTitle}>Target</h4>
+              <h4 className={classes.targetTitle}>Last week</h4>
               <div
                 className={classNames(classes.amountContainer, classes.negatif)}
               >
@@ -128,7 +128,7 @@ const Features = () => {
             </div>
 
             <div>
-              <h4 className={classes.targetTitle}>Target</h4>
+              <h4 className={classes.targetTitle}>Last month</h4>
               <div
                 className={classNames(classes.amountContainer, classes.negatif)}
               >

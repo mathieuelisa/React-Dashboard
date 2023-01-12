@@ -1,5 +1,14 @@
+import { Tooltip } from '@mui/material';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+} from 'recharts';
 
 const useStyles = createUseStyles({
   chartsContainer: {
@@ -10,13 +19,74 @@ const useStyles = createUseStyles({
     marginRight: 15,
     boxShadow: '2px 4px 10px 1px rgba(201,201,201,0.47)',
     borderRadius: 5,
-    height: 110,
+    flexDirection: 'column',
+  },
+  chartsTitle: {
+    color: '#bcbaba',
+    marginBottom: 60,
   },
 });
 
+const data = [
+  {
+    name: 'January',
+    total: 900,
+  },
+  {
+    name: 'February',
+    total: 300,
+  },
+  {
+    name: 'March',
+    total: 1200,
+  },
+  {
+    name: 'April',
+    total: 2080,
+  },
+  {
+    name: 'May',
+    total: 2800,
+  },
+  {
+    name: 'Juin',
+    total: 1090,
+  },
+];
+
 const Charts = () => {
   const classes = useStyles();
-  return <div className={classes.chartsContainer}>Charts</div>;
+  return (
+    <div className={classes.chartsContainer}>
+      <h4 className={classes.chartsTitle}>Months revenue</h4>
+      <ResponsiveContainer width='100%' aspect={2 / 1}>
+        <AreaChart
+          width={730}
+          height={250}
+          data={data}
+          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+        >
+          <defs>
+            <linearGradient id='total' x1='0' y1='0' x2='0' y2='1'>
+              <stop offset='5%' stopColor='#8884d8' stopOpacity={0.8} />
+              <stop offset='95%' stopColor='#8884d8' stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <XAxis dataKey='name' stroke='lightgrey' />
+          <YAxis />
+          <CartesianGrid strokeDasharray='3 3' />
+          <Tooltip />
+          <Area
+            type='monotone'
+            dataKey='total'
+            stroke='#8884d8'
+            fillOpacity={1}
+            fill='url(#total)'
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 
 export default Charts;
