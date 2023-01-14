@@ -65,13 +65,12 @@ const useStyles = createUseStyles({
     color: 'darkgoldenrod',
     padding: 3,
     borderRadius: 5,
-    backgroundColor: '##f6f6c8',
+    backgroundColor: '#fbfece',
   },
   euroIcon: {
     borderRadius: 5,
     color: 'green',
     padding: 3,
-
     backgroundColor: '#a3d4a3',
   },
   orderIcon: {
