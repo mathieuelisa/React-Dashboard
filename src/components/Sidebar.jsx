@@ -13,6 +13,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import { Link } from 'react-router-dom';
 
 const useStyles = createUseStyles({
   sidebar: {
@@ -80,14 +81,21 @@ const useStyles = createUseStyles({
     margin: '0 5px',
     cursor: 'pointer',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 });
 
 const Sidebar = () => {
   const classes = useStyles();
+
   return (
     <div className={classes.sidebar}>
       <div className={classes.logo}>
-        <p>REACT DASHBOARD</p>
+        <Link to={'/'} className={classes.link}>
+          <p>REACT DASHBOARD</p>
+        </Link>
       </div>
 
       <div className={classes.listContainer}>
@@ -95,25 +103,35 @@ const Sidebar = () => {
           <p className={classes.titleGroups}>MAIN</p>
           <li className={classes.item}>
             <PeopleIcon className={classes.icons} />
-            Dashboard
+            <Link to={'/'} className={classes.link}>
+              Dashboard
+            </Link>
           </li>
 
           <p className={classes.titleGroups}>LISTS</p>
           <li className={classes.item}>
             <PeopleIcon className={classes.icons} />
-            Users
+            <Link to={'/users'} className={classes.link}>
+              Users
+            </Link>
           </li>
           <li className={classes.item}>
             <LocalGroceryStoreIcon className={classes.icons} />
-            Products
+            <Link to={'/products'} className={classes.link}>
+              Products
+            </Link>
           </li>
           <li className={classes.item}>
             <CreditCardIcon className={classes.icons} />
-            Orders
+            <Link to={'/products'} className={classes.link}>
+              Orders
+            </Link>
           </li>
           <li className={classes.item}>
             <DashboardIcon className={classes.icons} />
-            Delivery
+            <Link to={'/products'} className={classes.link}>
+              Delivery
+            </Link>
           </li>
           <p className={classes.titleGroups}>USEFUL</p>
           <li className={classes.item}>

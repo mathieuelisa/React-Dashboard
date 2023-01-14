@@ -1,16 +1,30 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Datatable from '../../components/Datatable';
+import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/Sidebar';
 
 const useStyles = createUseStyles({
-  list: {
-    color: 'blue',
+  listContainer: {
+    display: 'flex',
+  },
+  container: {
+    flex: 5,
   },
 });
 
 const List = () => {
   const classes = useStyles();
 
-  return <div className={classes.list}>List</div>;
+  return (
+    <div className={classes.listContainer}>
+      <Sidebar />
+      <div className={classes.container}>
+        <Navbar />
+        <Datatable />
+      </div>
+    </div>
+  );
 };
 
 export default List;
