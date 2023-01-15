@@ -81,7 +81,7 @@ const Home = () => {
         </div>
 
         <div className={classes.secondWidgetContainer}>
-          <Charts />
+          <Charts title={'Months revenue'} />
           <Features />
         </div>
         <div className={classes.listContainer}>

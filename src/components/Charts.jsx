@@ -10,6 +10,7 @@ import {
   YAxis,
 } from 'recharts';
 import { data } from '../mocks/ChartsMock';
+import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   chartsContainer: {
@@ -28,11 +29,11 @@ const useStyles = createUseStyles({
   },
 });
 
-const Charts = () => {
+const Charts = ({ title }) => {
   const classes = useStyles();
   return (
     <div className={classes.chartsContainer}>
-      <h4 className={classes.chartsTitle}>Months revenue</h4>
+      <h4 className={classes.chartsTitle}>{title}</h4>
       <ResponsiveContainer width='100%' aspect={2 / 1}>
         <AreaChart
           width={730}
@@ -61,6 +62,10 @@ const Charts = () => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+Charts.propTypes = {
+  title: PropTypes.string,
 };
 
 export default Charts;

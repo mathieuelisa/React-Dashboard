@@ -5,7 +5,7 @@ export const columns = [
   {
     field: 'username',
     headerName: 'User',
-    width: 210,
+    width: 250,
     renderCell: (params) => {
       return (
         <div className='avatarContainer'>
@@ -15,17 +15,17 @@ export const columns = [
       );
     },
   },
-  { field: 'email', headerName: 'Email', width: 210 },
+  { field: 'email', headerName: 'Email', width: 240 },
   {
     field: 'age',
     headerName: 'Age',
     type: 'number',
-    width: 40,
+    width: 90,
   },
   {
     field: 'status',
     headerName: 'Status',
-    width: 100,
+    width: 130,
     renderCell: (params) => {
       return (
         <div
