@@ -47,10 +47,22 @@
   cursor: pointer;
 }
 
+.view:hover {
+  background-color: #2323a4;
+  color: whitesmoke;
+  transition: 0.8s;
+}
+
 .delete {
   color: #d32727;
   border: 1px solid #d32727;
   padding: 4px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #c12525;
+  color: whitesmoke;
+  transition: 0.8s;
 }

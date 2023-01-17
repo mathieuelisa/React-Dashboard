@@ -68,8 +68,8 @@ const Home = () => {
       <div className={classes.container}>
         <Navbar />
         <div className={classes.widgetsContainer}>
-          {widgets.map((e, i) => (
-            <Widget key={i} type={e} />
+          {widgets.map((element, i) => (
+            <Widget type={element} key={i} />
           ))}
           {/* {widgets2.map((e, i) =>
             e.type === 'widget1' ? (

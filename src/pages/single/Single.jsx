@@ -3,6 +3,8 @@ import { createUseStyles } from 'react-jss';
 import Charts from '../../components/Charts';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
+import Tables from '../../components/Tables';
+import UserInfo from '../../components/UserInfo';
 
 const useStyles = createUseStyles({
   singleContainer: {
@@ -54,6 +56,7 @@ const useStyles = createUseStyles({
     borderRadius: '0 0 0 5px',
     '&:hover': {
       backgroundColor: '#d0fcd0',
+      transition: '0.8s',
     },
   },
   userDetails: {},
@@ -68,6 +71,13 @@ const useStyles = createUseStyles({
   infosTitle: {
     marginRight: 10,
   },
+  bottomTitle: {
+    color: '#bcbaba',
+    marginBottom: 10,
+  },
+  bottomContainer: {
+    padding: 20,
+  },
 });
 
 const Single = () => {
@@ -78,37 +88,15 @@ const Single = () => {
       <div className={classes.container}>
         <Navbar />
         <div className={classes.topContainer}>
-          <div className={classes.leftContainer}>
-            <div className={classes.editButton}>Edit</div>
-            <h4 className={classes.singleTitle}>User informations</h4>
-            <div className={classes.item}>
-              <img
-                src='https://www.gabrielgorgi.com/wp-content/uploads/2019/12/01.jpg'
-                alt='avatar'
-                className={classes.imgAvatar}
-              />
-              <div className={classes.userDetails}>
-                <h2 className={classes.userName}>Mathieu ELISA</h2>
-                <div className={classes.infos}>
-                  <p className={classes.infosTitle}>Phone:</p>
-                  <p>07 68 29 22 78</p>
-                </div>
-                <div className={classes.infos}>
-                  <p className={classes.infosTitle}>Address:</p>
-                  <p>18 rue des mimosas</p>
-                </div>
-                <div className={classes.infos}>
-                  <p className={classes.infosTitle}>Country:</p>
-                  <p>FRANCE</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <UserInfo />
           <div className={classes.rightContainer}>
             <Charts title={'User spending 6 months'} />
           </div>
         </div>
-        <div className={classes.bottomContainer}></div>
+        <div className={classes.bottomContainer}>
+          <h4 className={classes.bottomTitle}>Latest transactions</h4>
+          <Tables />
+        </div>
       </div>
     </div>
   );

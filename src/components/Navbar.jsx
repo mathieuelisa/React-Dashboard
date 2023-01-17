@@ -53,7 +53,9 @@ const useStyles = createUseStyles({
   },
   imageProfil: {
     height: 40,
+    width: 40,
     borderRadius: '50%',
+    objectFit: 'cover',
   },
   counter: {
     display: 'flex',

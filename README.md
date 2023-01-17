@@ -2,7 +2,7 @@
 
 ## The project
 
-This project is carried out in order to obtain a dashboard to better manage my e-commerce applications
+This project is carried out in order to obtain a dashboard to better manage my e-commerce applications.
 
 ## Design 🔧
 
@@ -12,6 +12,7 @@ The design was made using [Adobe XD](https://www.adobe.com/fr/products/xd.html)
 
 - React-Router-Dom V6
 - React JSS
+- Context API
 - Material UI
 - Classnames
 - Recharts JS
